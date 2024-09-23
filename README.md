@@ -38,4 +38,6 @@ id INT AUTO_INCREMENT PRIMARY KEY,
 last_number INT NOT NULL
 );
 
-INSERT INTO id_counter (last_number) VALUES (0); */
+INSERT INTO id_counter (last_number) VALUES (0); 
+
+##

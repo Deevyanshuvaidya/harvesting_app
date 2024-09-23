@@ -1,7 +1,9 @@
-import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
-import 'login.dart';
 import 'dart:convert';
+
+import 'package:flutter/material.dart';
+import 'NavBar.dart';  // Import NavBar
+import 'login.dart';
+import 'package:http/http.dart' as http;
 
 class DashboardPage extends StatefulWidget {
   final String uniqueId;
@@ -47,7 +49,7 @@ class _DashboardPageState extends State<DashboardPage> {
   }
 
   void _logout() {
-    Navigator.push(
+    Navigator.pushReplacement(
       context,
       MaterialPageRoute(builder: (context) => LoginPage()),
     );
@@ -56,76 +58,143 @@ class _DashboardPageState extends State<DashboardPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white30,
+        title: Text('Profile Dashboard'),
+      ),
+      drawer: NavBar(), // NavBar as the drawer
       body: SafeArea(
         child: isLoading
             ? Center(child: CircularProgressIndicator())
-            : Stack(
-          children: [
-            Column(
-              children: [
-                Container(
-                  color: Colors.green.shade600,
-                  height: MediaQuery.of(context).size.height * 0.25,
-                  width: double.infinity,
-                  padding: EdgeInsets.all(16.0),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Icon(Icons.person, size: 64, color: Colors.white),
-                      SizedBox(width: 16.0),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            name,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 24,
-                              fontWeight: FontWeight.bold,
-                            ),
+            : SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // Profile Header
+              Container(
+                color: Colors.green.shade600,
+                padding: EdgeInsets.all(16.0),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Icon(Icons.person, size: 64, color: Colors.white),
+                    SizedBox(width: 16.0),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          name,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
                           ),
-                          SizedBox(height: 8.0),
-                          Text(
-                            widget.uniqueId,
-                            style: TextStyle(
-                              color: Colors.white70,
-                              fontSize: 16,
-                            ),
+                        ),
+                        SizedBox(height: 8.0),
+                        Text(
+                          widget.uniqueId,
+                          style: TextStyle(
+                            color: Colors.white70,
+                            fontSize: 16,
                           ),
-                          SizedBox(height: 8.0),
-                          Row(
-                            children: [
-                              Icon(Icons.location_on, color: Colors.white70),
-                              SizedBox(width: 4.0),
-                              Text(
-                                location,
-                                style: TextStyle(
-                                  color: Colors.white70,
-                                  fontSize: 16,
-                                ),
+                        ),
+                        SizedBox(height: 8.0),
+                        Row(
+                          children: [
+                            Icon(Icons.location_on, color: Colors.white70),
+                            SizedBox(width: 4.0),
+                            Text(
+                              location,
+                              style: TextStyle(
+                                color: Colors.white70,
+                                fontSize: 16,
                               ),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
-                // Add other dashboard content here
-              ],
-            ),
-            Positioned(
-              top: 16.0,
-              right: 16.0,
-              child: IconButton(
-                icon: Icon(Icons.logout, color: Colors.black),
-                onPressed: _logout,
               ),
-            ),
-          ],
+
+              // Dashboard content
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(height: 16.0),
+                    Text(
+                      "Dashboard Overview",
+                      style: TextStyle(
+                          fontSize: 20, fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(height: 16.0),
+                    // Add Dashboard buttons or cards here
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        // Example Button 1
+                        _buildDashboardButton(
+                            context, Icons.bar_chart, "Reports"),
+                        // Example Button 2
+                        _buildDashboardButton(
+                            context, Icons.settings, "Settings"),
+                        // Example Button 3
+                        _buildDashboardButton(
+                            context, Icons.person, "Profile"),
+                      ],
+                    ),
+                    SizedBox(height: 20.0),
+                    Center(
+                      child: ElevatedButton.icon(
+                        onPressed: _logout,
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.redAccent,
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 24, vertical: 12),
+                          textStyle: TextStyle(fontSize: 18),
+                        ),
+                        icon: Icon(Icons.logout),
+                        label: Text("Logout"),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
+    );
+  }
+
+  // Helper method to create dashboard buttons
+  Widget _buildDashboardButton(
+      BuildContext context, IconData icon, String label) {
+    return Column(
+      children: [
+        Material(
+          color: Colors.green.shade600,
+          borderRadius: BorderRadius.circular(8.0),
+          child: InkWell(
+            onTap: () {
+              // Handle button tap, navigate to other pages if needed
+            },
+            child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Icon(icon, size: 36.0, color: Colors.white),
+            ),
+          ),
+        ),
+        SizedBox(height: 8.0),
+        Text(label,
+            style: TextStyle(
+                fontSize: 16.0,
+                fontWeight: FontWeight.w600,
+                color: Colors.black)),
+      ],
     );
   }
 }

@@ -57,6 +57,9 @@ flutter:
   assets:
     - assets/login.png
     - assets/img1.png
+    - assets/SHSTRA Main Logo.png
+    - assets/Logo SHSTRA.jpg
+    - assets/1.png
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

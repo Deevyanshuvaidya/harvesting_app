@@ -30,7 +30,9 @@ class _LoginPageState extends State<LoginPage> {
 
       String username = _emailController.text.trim();
       String password = _passwordController.text.trim();
-      //192.168.147.35
+      //192.168.147.35 -- DD 1st computer
+      //192.168.54.35--- DD new ip
+
       var response = await http.post(
         Uri.parse('http://192.168.54.35/api_app_testing/login.php'),  // Replace with your server address
         body: {
