@@ -124,7 +124,7 @@ class _LoginPageState extends State<LoginPage> {
                     controller: _emailController,
                     keyboardType: TextInputType.emailAddress,
                     decoration: InputDecoration(
-                      hintText: 'Enter your email or SSH ID',
+                      hintText: 'Enter your email or Oprator ID',
                       prefixIcon: Icon(Icons.email, color: Colors.black),
                       contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
                       border: OutlineInputBorder(

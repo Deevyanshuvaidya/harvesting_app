@@ -62,7 +62,7 @@ class _DashboardPageState extends State<DashboardPage> {
         backgroundColor: Colors.white30,
         title: Text('Profile Dashboard'),
       ),
-      drawer: NavBar(), // NavBar as the drawer
+      drawer: NavBar(uniqueId: widget.uniqueId), // NavBar as the drawer
       body: SafeArea(
         child: isLoading
             ? Center(child: CircularProgressIndicator())

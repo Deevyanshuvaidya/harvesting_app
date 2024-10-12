@@ -1,9 +1,14 @@
-import 'package:app/dashboard.dart';
 import 'package:flutter/material.dart';
-
+import 'dashboard.dart';
 import 'myssh.dart';
+import 'login.dart'; // Import the login page
 
 class NavBar extends StatelessWidget {
+  final String uniqueId;  // Declare uniqueId
+
+  // Constructor to accept uniqueId as a parameter
+  NavBar({required this.uniqueId});
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -35,9 +40,8 @@ class NavBar extends StatelessWidget {
             onTap: () {
               Navigator.pushReplacement(
                 context,
-                MaterialPageRoute(builder: (context) => MySSHPage(uniqueId: '',)),
+                MaterialPageRoute(builder: (context) => MySSHPage(uniqueId: uniqueId)),  // Pass uniqueId to MySSHPage
               ); // Close the drawer
-              // Add navigation logic for My SSH page
             },
           ),
           ListTile(
@@ -52,11 +56,10 @@ class NavBar extends StatelessWidget {
             leading: Icon(Icons.home),
             title: Text('Home'),
             onTap: () {
-              Navigator.pushReplacement(
+              Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => DashboardPage(uniqueId: '',)),
+                MaterialPageRoute(builder: (context) => DashboardPage(uniqueId: uniqueId)),  // Pass uniqueId to DashboardPage
               ); // Close the drawer
-              // Add navigation logic for Home page
             },
           ),
 
@@ -86,12 +89,46 @@ class NavBar extends StatelessWidget {
             leading: Icon(Icons.logout),
             title: Text('Logout'),
             onTap: () {
-              Navigator.pop(context); // Close the drawer
-              // Implement the logout functionality
+              _showLogoutConfirmation(context); // Show confirmation dialog
             },
           ),
         ],
       ),
+    );
+  }
+
+  // Function to show the logout confirmation dialog
+  void _showLogoutConfirmation(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text("Confirm Logout"),
+          content: Text("Are you sure you want to log out?"),
+          actions: <Widget>[
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop(); // Close the dialog
+              },
+              child: Text("No"),
+            ),
+            TextButton(
+              onPressed: () {
+                _logout(context);  // Call logout function if 'Yes' is pressed
+              },
+              child: Text("Yes"),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  // Logout function to navigate to the login page
+  void _logout(BuildContext context) {
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (context) => LoginPage()),  // Navigate to LoginPage
     );
   }
 }

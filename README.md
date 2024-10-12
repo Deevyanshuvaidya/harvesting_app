@@ -40,4 +40,23 @@ last_number INT NOT NULL
 
 INSERT INTO id_counter (last_number) VALUES (0); 
 
+
+3) sshharvester-->
+   CREATE TABLE sshharvester (
+   id INT AUTO_INCREMENT PRIMARY KEY,
+   location VARCHAR(255) NOT NULL,
+   industry_type VARCHAR(50) NOT NULL,
+   industry_name VARCHAR(255),
+   unique_id VARCHAR(50) NOT NULL
+   );
+
+4) CREATE TABLE sshharop (
+   id INT AUTO_INCREMENT PRIMARY KEY,
+   harvester_id VARCHAR(50) NOT NULL,
+   location VARCHAR(255) NOT NULL,
+   industry_type VARCHAR(50) NOT NULL,
+   industry_name VARCHAR(255),
+   oprator_name VARCHAR(255),
+   oprator_id VARCHAR(50) NOT NULL
+   );
 ##
