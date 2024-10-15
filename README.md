@@ -20,7 +20,7 @@ samples, guidance on mobile development, and a full API reference.
 1) Make sure that you have xaamp downloaded in your system. If not download it.
 2) Open Xaamp interface and start the appache and mysql server. And whenever you want to use database start both servers.
 3) Now open your C drive(By default windows drive) and in this open xampp folder then open htdocs folder.
-4) Now Create the new api_app_testing folder in htdocs folder.
+4) Now Create the new api_app_testing folder in htdocs folder.(C:\xampp\htdocs\api_app_testing)
 5) And in this new api_app_testing folder paste all php files which are present in php_file folder in above repository .
 6) Now Create the database open your browser and search "http://localhost/phpmyadmin/" the phpmyadmin interface is open
    and in it create database name "SHSTRA_APP" and in it create following tables using following query.
