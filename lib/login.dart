@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'dashboard.dart';
+import 'forgot_password.dart';
 import 'signup.dart';
 
 class LoginPage extends StatefulWidget {
@@ -34,7 +35,7 @@ class _LoginPageState extends State<LoginPage> {
       //192.168.54.35--- DD new ip
 
       var response = await http.post(
-        Uri.parse('http://192.168.54.35/api_app_testing/login.php'),  // Replace with your server address
+        Uri.parse('http://192.168.142.35/api_app_testing/login.php'),  // Replace with your server address
         body: {
           'username': username,
           'password': password,
@@ -175,7 +176,10 @@ class _LoginPageState extends State<LoginPage> {
                     alignment: Alignment.centerRight,
                     child: TextButton(
                       onPressed: () {
-                        // Handle Forgot Password
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => ForgotPasswordPage()),  // Corrected
+                        );
                       },
                       child: Text(
                         'Forgot Password?',

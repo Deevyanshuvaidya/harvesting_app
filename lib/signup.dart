@@ -101,7 +101,7 @@ class _SignUpPageState extends State<SignUpPage> {
         _isLoading = true;
       });
 
-      var url = Uri.parse('http://192.168.54.35/api_app_testing/signup.php');
+      var url = Uri.parse('http://192.168.142.35/api_app_testing/signup.php');
 
       var response = await http.post(url, body: {
         'name': name,

@@ -27,7 +27,7 @@ class _DashboardPageState extends State<DashboardPage> {
 
   Future<void> fetchOperatorDetails() async {
     var response = await http.post(
-      Uri.parse('http://192.168.54.35/api_app_testing/fetch_operator_details.php'),  // Replace with your server address
+      Uri.parse('http://192.168.142.35/api_app_testing/fetch_operator_details.php'),  // Replace with your server address
       body: {'unique_id': widget.uniqueId},
     );
 

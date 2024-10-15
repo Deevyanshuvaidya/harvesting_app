@@ -31,6 +31,8 @@ dependencies:
   flutter:
     sdk: flutter
   email_otp: ^3.0.2
+  permission_handler:
+  flutter_local_notifications:
   http:
 
 

@@ -76,7 +76,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
         _isLoading = true;
       });
 
-      var url = Uri.parse('http://192.168.147.35/api_app_testing/reset_password.php');
+      var url = Uri.parse('http://192.168.142.35/api_app_testing/reset_password.php');
       var response = await http.post(url, body: {
         'email': _emailController.text,
         'password': _passwordController.text,
