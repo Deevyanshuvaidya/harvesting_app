@@ -16,6 +16,8 @@ For help getting started with Flutter development, view the
 samples, guidance on mobile development, and a full API reference.
 
 # Wellcome to this peoject----
+Note:- Dont directly commit or push into master branch make a sub-branch make confirm changes and if it working properly then commit and push the changes
+
 ## Colaborators Instructions--->
 1) Make sure that you have xaamp downloaded in your system. If not download it.
 2) Open Xaamp interface and start the appache and mysql server. And whenever you want to use database start both servers.
