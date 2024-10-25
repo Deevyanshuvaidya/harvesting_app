@@ -2,7 +2,7 @@
 $servername = "localhost"; // Database host
 $username = "root"; // Database username
 $password = ""; // Database password
-$dbname = "shstra_app"; // Database name
+$dbname = "shstra_app2"; // Database name
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

@@ -4,10 +4,10 @@ import 'myssh.dart';
 import 'login.dart'; // Import the login page
 
 class NavBar extends StatelessWidget {
-  final String uniqueId;  // Declare uniqueId
+  final String OPERATOR_ID;  // Declare uniqueId
 
   // Constructor to accept uniqueId as a parameter
-  NavBar({required this.uniqueId});
+  NavBar({required this.OPERATOR_ID});
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +40,7 @@ class NavBar extends StatelessWidget {
             onTap: () {
               Navigator.pushReplacement(
                 context,
-                MaterialPageRoute(builder: (context) => MySSHPage(uniqueId: uniqueId)),  // Pass uniqueId to MySSHPage
+                MaterialPageRoute(builder: (context) => MySSHPage(OPERATOR_ID: OPERATOR_ID)),  // Pass uniqueId to MySSHPage
               ); // Close the drawer
             },
           ),
@@ -58,7 +58,7 @@ class NavBar extends StatelessWidget {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => DashboardPage(uniqueId: uniqueId)),  // Pass uniqueId to DashboardPage
+                MaterialPageRoute(builder: (context) => DashboardPage(OPERATOR_ID: OPERATOR_ID)),  // Pass uniqueId to DashboardPage
               ); // Close the drawer
             },
           ),
@@ -103,20 +103,68 @@ class NavBar extends StatelessWidget {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text("Confirm Logout"),
-          content: Text("Are you sure you want to log out?"),
-          actions: <Widget>[
-            TextButton(
-              onPressed: () {
-                Navigator.of(context).pop(); // Close the dialog
-              },
-              child: Text("No"),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(15), // Rounded corners for the dialog
+            side: BorderSide(color: Colors.grey.shade300, width: 2), // Shaded border
+          ),
+          title: Center(
+            child: Text(
+              "Confirm Logout",
+              style: TextStyle(
+                fontWeight: FontWeight.bold, // Bold header
+                fontSize: 20,
+              ),
             ),
-            TextButton(
-              onPressed: () {
-                _logout(context);  // Call logout function if 'Yes' is pressed
-              },
-              child: Text("Yes"),
+          ),
+          content: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 10.0),
+            child: Text(
+              "Are you sure you want to log out?",
+              textAlign: TextAlign.center, // Center align text
+              style: TextStyle(fontSize: 16),
+            ),
+          ),
+          actions: <Widget>[
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                TextButton(
+                  style: TextButton.styleFrom(
+                    backgroundColor: Colors.green, // Green background for the button
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8), // Rounded corners
+                    ),
+                  ),
+                  onPressed: () {
+                    Navigator.of(context).pop(); // Close the dialog
+                  },
+                  child: Text(
+                    "No",
+                    style: TextStyle(
+                      color: Colors.white, // White text
+                      fontWeight: FontWeight.bold, // Bold text for the button
+                    ),
+                  ),
+                ),
+                TextButton(
+                  style: TextButton.styleFrom(
+                    backgroundColor: Colors.green, // Green background for the button
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8), // Rounded corners
+                    ),
+                  ),
+                  onPressed: () {
+                    _logout(context);  // Call logout function if 'Yes' is pressed
+                  },
+                  child: Text(
+                    "Yes",
+                    style: TextStyle(
+                      color: Colors.white, // White text
+                      fontWeight: FontWeight.bold, // Bold text for the button
+                    ),
+                  ),
+                ),
+              ],
             ),
           ],
         );

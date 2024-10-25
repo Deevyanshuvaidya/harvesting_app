@@ -6,17 +6,17 @@ import 'login.dart';
 import 'package:http/http.dart' as http;
 
 class DashboardPage extends StatefulWidget {
-  final String uniqueId;
+  final String OPERATOR_ID;
 
-  DashboardPage({required this.uniqueId});
+  DashboardPage({required this.OPERATOR_ID});
 
   @override
   _DashboardPageState createState() => _DashboardPageState();
 }
 
 class _DashboardPageState extends State<DashboardPage> {
-  String name = '';
-  String location = '';
+  String OPERATOR_NAME = '';
+  String VILLAGE = '';
   bool isLoading = true;
 
   @override
@@ -27,15 +27,15 @@ class _DashboardPageState extends State<DashboardPage> {
 
   Future<void> fetchOperatorDetails() async {
     var response = await http.post(
-      Uri.parse('http://192.168.142.35/api_app_testing/fetch_operator_details.php'),  // Replace with your server address
-      body: {'unique_id': widget.uniqueId},
+      Uri.parse('http://192.168.165.35/api_app_testing/fetch_operator_details.php'),  // Replace with your server address
+      body: {'OPERATOR_ID': widget.OPERATOR_ID},
     );
 
     var data = json.decode(response.body);
     if (data['status'] == 'success') {
       setState(() {
-        name = data['data']['name'];
-        location = data['data']['location'];
+        OPERATOR_NAME = data['data']['OPERATOR_NAME'];
+        VILLAGE = data['data']['VILLAGE'];
         isLoading = false;
       });
     } else {
@@ -62,7 +62,7 @@ class _DashboardPageState extends State<DashboardPage> {
         backgroundColor: Colors.white30,
         title: Text('Profile Dashboard'),
       ),
-      drawer: NavBar(uniqueId: widget.uniqueId), // NavBar as the drawer
+      drawer: NavBar(OPERATOR_ID: widget.OPERATOR_ID), // NavBar as the drawer
       body: SafeArea(
         child: isLoading
             ? Center(child: CircularProgressIndicator())
@@ -83,7 +83,7 @@ class _DashboardPageState extends State<DashboardPage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          name,
+                          OPERATOR_NAME,
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 24,
@@ -92,7 +92,7 @@ class _DashboardPageState extends State<DashboardPage> {
                         ),
                         SizedBox(height: 8.0),
                         Text(
-                          widget.uniqueId,
+                          widget.OPERATOR_ID,
                           style: TextStyle(
                             color: Colors.white70,
                             fontSize: 16,
@@ -104,7 +104,7 @@ class _DashboardPageState extends State<DashboardPage> {
                             Icon(Icons.location_on, color: Colors.white70),
                             SizedBox(width: 4.0),
                             Text(
-                              location,
+                              VILLAGE,
                               style: TextStyle(
                                 color: Colors.white70,
                                 fontSize: 16,
