@@ -31,7 +31,7 @@ class _MapPageState extends State<MapPage> {
 
   // Function to fetch directions
   Future<void> _getDirections() async {
-    String googleAPIKey = 'AIzaSyAzsEg1oDtDBpnnlTyOMaDapMCIHBe5Dkk'; // Replace with your Google Directions API key
+    String googleAPIKey = ''; // Replace with your Google Directions API key
     String url =
         'https://maps.googleapis.com/maps/api/directions/json?origin=${widget.predefinedLatitude},${widget.predefinedLongitude}&destination=${widget.farmerLatitude},${widget.farmerLongitude}&key=$googleAPIKey';
 
