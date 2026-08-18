@@ -1,14 +1,19 @@
 
+# 🌾 Harvesting App
+
+A Flutter-based mobile application prototype for managing harvesting-related operations, including operators, farmers, harvest records, allocations, authentication, and location-based information.
+
+The application is built with **Flutter and Dart** and communicates with a **PHP/MySQL backend** through HTTP APIs.
+
+---
+
 # 📌 Project Status
 
-**SHSTRA App** is a **prototype application developed during an internship at SHSTRATVA PVT LTD, Pune**.
+**Harvesting App** is a prototype mobile application developed to demonstrate a harvesting-management workflow.
 
-The application was developed as a proof-of-concept/prototype to demonstrate a Flutter-based mobile solution integrated with a PHP/MySQL backend for managing SSH operators, farmers, harvest information, allocation data, authentication, and related operational workflows.
-
-### Current Status
+The application provides functionality for managing:
 
 ```text
-✅ Prototype Developed
 ✅ Flutter Mobile Application
 ✅ PHP Backend
 ✅ MySQL Database
@@ -17,234 +22,203 @@ The application was developed as a proof-of-concept/prototype to demonstrate a F
 ✅ Password Recovery
 ✅ OTP Support
 ✅ Dashboard
-✅ SSH Management
+✅ Operator Management
 ✅ Farmer Management
 ✅ Harvest Management
 ✅ Harvest Allocation
-✅ Map Integration
+✅ Map / Location Integration
 ✅ Local Notifications
 ✅ Permission Handling
 ````
 
-> **Note:** This project was developed during an internship and should be considered a prototype/reference implementation rather than a fully production-hardened enterprise system.
+> **Note:** This project is a prototype/reference implementation and may require additional security, testing, configuration, and infrastructure work before being used in a production environment.
 
 ---
 
-# 🏢 Internship Project
+# 🎯 Project Overview
 
-This project was developed during an internship at:
+The **Harvesting App** is designed to demonstrate how a mobile application can be connected to a backend API and relational database to manage harvesting-related information.
 
-## **SHSTRATVA PVT LTD, Pune**
-
-The project was created as part of the internship period to gain practical experience in software development and to develop a working prototype using modern application-development technologies.
-
-### Internship Project Scope
-
-The development involved practical implementation of:
-
-* Flutter mobile application development
-* Dart programming
-* PHP backend development
-* MySQL database management
-* REST/API-based communication
-* Authentication workflows
-* OTP functionality
-* Farmer management
-* Harvest management
-* Allocation management
-* Map/location integration
-* Mobile permissions
-* Local notifications
-* Git/GitHub-based development
-
-The application was developed as a **prototype during the internship period** based on the requirements, guidance, and development objectives associated with the internship.
-
----
-
-# 🎓 Internship Learning & Development
-
-This project provided practical exposure to the complete software-development lifecycle, including:
+The application follows a simple architecture:
 
 ```text
-Requirement Understanding
-        ↓
-Application Design
-        ↓
-Database Design
-        ↓
-Flutter Development
-        ↓
-PHP API Development
-        ↓
-MySQL Integration
-        ↓
-API Testing
-        ↓
-Application Testing
-        ↓
-Debugging
-        ↓
-Prototype Demonstration
+Flutter Mobile App
+        │
+        ▼
+     HTTP APIs
+        │
+        ▼
+    PHP Backend
+        │
+        ▼
+    MySQL Database
 ```
 
-The project helped provide hands-on experience in building and integrating a complete mobile application with a backend API and relational database.
+The mobile application communicates with the PHP backend using HTTP requests, while MySQL is used for storing application data.
 
 ---
 
-# ⚖️ Copyright & Intellectual Property
+# ✨ Main Features
 
-© **SHSTRATVA PVT LTD, Pune. All Rights Reserved**, subject to the company's applicable intellectual-property policies, agreements, and rights.
+## 👤 User Registration
 
-**SHSTRA App was developed as a prototype during an internship at SHSTRATVA PVT LTD, Pune.**
+Users can register through the mobile application.
 
-The ownership, copyright, intellectual-property rights, usage rights, distribution rights, commercial rights, and other applicable rights relating to the project, source code, application-specific implementation, business logic, database design, documentation, and other company-provided or company-related materials shall be governed by the applicable terms, agreements, policies, and intellectual-property rights of **SHSTRATVA PVT LTD**.
+Registration information can include:
 
-Nothing in this README should be interpreted as transferring ownership or intellectual-property rights from SHSTRATVA PVT LTD to the individual developer unless explicitly authorized or agreed upon in writing.
+* Name
+* Email
+* Phone number
+* Location
+* Industry type
+* Industry name
+* Unique ID
+* Password
 
-The intern/developer's contribution to the project does not, by itself, constitute a transfer of ownership or a grant of redistribution or commercial-use rights.
-
-### Important
-
-Unauthorized:
-
-* Copying substantial portions of the source code
-* Redistributing the project
-* Commercially using the project
-* Publishing the project as an independent commercial product
-* Claiming ownership of company-owned work
-* Reusing proprietary business logic
-* Reusing company-specific database structures
-* Creating derivative works from proprietary portions
-* Removing copyright or attribution notices
-* Publishing confidential or proprietary company information
-
-may constitute a violation of applicable intellectual-property, confidentiality, contractual, or other legal rights.
-
-Any reuse, redistribution, commercial usage, publication, or derivative work should be undertaken only with appropriate authorization from **SHSTRATVA PVT LTD** and/or the applicable rights holder.
+After successful registration, the user information is stored in the database.
 
 ---
 
-# 🔐 Confidentiality Notice
+## 🔐 Login
 
-This repository may contain or may have been developed using information, requirements, workflows, designs, database structures, or other materials associated with **SHSTRATVA PVT LTD**.
+Registered users can log in to the application using their credentials.
 
-Users should not assume that repository visibility constitutes permission to use, reproduce, distribute, commercialize, or disclose company-owned or confidential information.
+Basic workflow:
 
-Any confidential, proprietary, personal, customer-related, operational, or company-sensitive information must be handled according to the applicable policies, agreements, and instructions of SHSTRATVA PVT LTD.
-
-If any content in this repository is identified as confidential or proprietary, it should not be copied, redistributed, disclosed, or commercially exploited without appropriate authorization.
-
----
-
-# 📄 License
-
-This project is a **proprietary internship prototype developed during an internship at SHSTRATVA PVT LTD, Pune**.
-
-**All rights reserved unless explicitly stated otherwise by SHSTRATVA PVT LTD or the applicable rights holder.**
-
-No license is granted to any third party to:
-
-* Copy
-* Modify
-* Redistribute
-* Publish
-* Sublicense
-* Commercially exploit
-* Republish
-* Create derivative works from
-* Rebrand or present as their own
-
-the proprietary portions of this project without explicit authorization from the applicable rights holder.
-
-The project should not be treated as an open-source project merely because the repository is publicly accessible.
-
-Public availability of the repository does **not** automatically grant permission to reuse, distribute, modify, or commercially exploit the source code.
-
-Any permissions granted to the intern/developer or other contributors are subject to the applicable internship agreement, employment/contractual terms, company policies, and intellectual-property arrangements.
-
-### Third-Party Components
-
-This project uses third-party technologies, frameworks, libraries, packages, and services, including but not limited to:
-
-* Flutter
-* Dart
-* PHP
-* MySQL
-* XAMPP
-* Google Maps-related components
-* Flutter/Dart packages
-
-Third-party components remain subject to their respective licenses and terms.
-
-SHSTRATVA PVT LTD does not claim ownership of third-party software, libraries, frameworks, or services.
-
-Users must independently comply with the licenses and terms applicable to those third-party components.
-
-### License & Permission Requests
-
-For permission regarding:
-
-* Commercial use
-* Redistribution
-* Modification
-* Publication
-* Reuse
-* Derivative works
-* Production deployment
-* Integration into another product
-
-please contact **SHSTRATVA PVT LTD** or the applicable project rights holder before proceeding.
+```text
+Enter Credentials
+       ↓
+Send Request to API
+       ↓
+Validate User
+       ↓
+Authentication Successful
+       ↓
+Open Application Dashboard
+```
 
 ---
 
-# ⚠️ Disclaimer
+## 🔑 Password Recovery
 
-SHSTRA App is an **internship-developed prototype** and is provided for demonstration and development purposes.
+The application includes password-recovery functionality.
 
-The prototype may contain:
-
-* Development configurations
-* Local API configurations
-* Sample/test data
-* Environment-specific settings
-* Prototype-level implementation
-* Development dependencies
-* Local network configurations
-
-The prototype should not be considered production-ready without appropriate review, testing, security hardening, infrastructure configuration, and authorization from the applicable organization.
-
-Before deploying or modifying the project for production use, appropriate authorization and technical/security review should be obtained.
+OTP-based verification can be used to verify the user before allowing password-related operations.
 
 ---
 
-# 👨‍💻 Developer / Internship Contribution
+## 📧 OTP Support
 
-The project was developed by:
+The application uses OTP functionality for verification-related workflows.
 
-**Deevyanshu Vaidya**
+The project includes the following Flutter dependency:
 
-as part of an internship at:
-
-**SHSTRATVA PVT LTD, Pune**
-
-The developer's contribution includes software development, implementation, integration, testing, debugging, and prototype development carried out during the internship period.
-
-> **Note:** Attribution of the developer's contribution does not imply ownership of the project's intellectual property. Ownership and usage rights are governed by the applicable terms and agreements with SHSTRATVA PVT LTD.
+```yaml
+email_otp: ^3.0.2
+```
 
 ---
 
-# 🏢 Organization
+# 👨‍🌾 Farmer Management
 
-**SHSTRATVA PVT LTD**
-**Pune, Maharashtra, India**
+The application provides functionality for managing farmer-related information.
 
-The project was developed during the internship period as a prototype under the organization's applicable project requirements, guidance, policies, and intellectual-property arrangements.
+Farmer information can include:
+
+* Farmer ID
+* Farmer name
+* Location
+* Survey number
+* Village
+* Taluka
+* District
+* Pincode
+* Acre information
+* Document data
+
+The information is stored in the MySQL database and can be retrieved through the backend API.
 
 ---
 
-# 📚 Technology Stack
+# 🌱 Harvest Management
 
-The prototype was developed using:
+The application provides functionality for managing harvest records.
+
+A harvest record can be associated with an operator and can contain information such as:
+
+* Harvest ID
+* Operator ID
+* Ownership information
+* Active/disabled status
+
+---
+
+# 🔄 Harvest Allocation
+
+The application provides functionality for allocating harvest records to farmers.
+
+An allocation can contain:
+
+* Harvest ID
+* Farmer ID
+* Allocation date
+* Allocation status
+
+Basic workflow:
+
+```text
+Harvest
+   ↓
+Select Farmer
+   ↓
+Create Allocation
+   ↓
+Store Allocation
+   ↓
+View Allocation
+```
+
+---
+
+# 🗺️ Map / Location Integration
+
+The application includes location-related functionality that can be used to display or manage location information.
+
+Map-related functionality can be extended to support:
+
+* Farmer locations
+* Harvest locations
+* Operational areas
+* Location-based information
+
+---
+
+# 🔔 Local Notifications
+
+The application supports local notifications using Flutter notification functionality.
+
+Notifications can be used for events such as:
+
+* Application updates
+* Harvest-related notifications
+* Allocation updates
+* Operational reminders
+
+---
+
+# 📱 Permission Handling
+
+The project uses Flutter's permission-handling functionality to request and manage required device permissions.
+
+This can be useful for features that require access to:
+
+* Location
+* Notifications
+* Other device capabilities
+
+---
+
+# 🛠️ Technology Stack
 
 | Technology          | Purpose                           |
 | ------------------- | --------------------------------- |
@@ -253,30 +227,920 @@ The prototype was developed using:
 | PHP                 | Backend/API development           |
 | MySQL               | Database                          |
 | XAMPP               | Local development server          |
-| phpMyAdmin          | Database administration           |
+| phpMyAdmin          | Database management               |
 | HTTP                | Frontend-backend communication    |
-| Google Maps         | Location/map functionality        |
-| Email OTP           | OTP functionality                 |
+| Email OTP           | OTP verification                  |
 | Local Notifications | Notification functionality        |
 | Permission Handler  | Device permission management      |
 
 ---
 
-# 📝 Attribution
+# 🏗️ Application Architecture
 
-If this project is referenced in a portfolio, resume, academic document, internship report, presentation, or similar material, it should be described accurately as:
+The project follows a basic client-server architecture.
 
-> **"SHSTRA App — A prototype developed during an internship at SHSTRATVA PVT LTD, Pune."**
+```text
+                   MOBILE DEVICE
+                        │
+                        ▼
+              ┌──────────────────┐
+              │  Flutter App     │
+              │                  │
+              │  Dart            │
+              │  UI              │
+              │  Business Logic  │
+              └────────┬─────────┘
+                       │
+                       │ HTTP Requests
+                       ▼
+              ┌──────────────────┐
+              │   PHP APIs       │
+              │                  │
+              │ Authentication   │
+              │ Farmer APIs      │
+              │ Harvest APIs     │
+              │ Allocation APIs  │
+              └────────┬─────────┘
+                       │
+                       ▼
+              ┌──────────────────┐
+              │ MySQL Database   │
+              │                  │
+              │ Operators        │
+              │ Farmers          │
+              │ Harvests         │
+              │ Allocations      │
+              └──────────────────┘
+```
 
-Use of the project name, company name, logos, branding, proprietary information, or other company materials should comply with the applicable permissions and policies of SHSTRATVA PVT LTD.
+---
+
+# 📂 Project Structure
+
+A simplified project structure is:
+
+```text
+harvesting-app/
+│
+├── lib/
+│   ├── main.dart
+│   ├── screens/
+│   ├── services/
+│   ├── models/
+│   └── other Dart files
+│
+├── php_file/
+│   ├── authentication APIs
+│   ├── farmer APIs
+│   ├── harvest APIs
+│   └── allocation APIs
+│
+├── assets/
+│
+├── pubspec.yaml
+│
+└── README.md
+```
+
+> The exact structure may vary depending on the current version of the project.
+
+---
+
+# ⚙️ Local Development Setup
+
+The backend of the prototype can be run locally using **XAMPP**.
+
+The following setup is required:
+
+```text
+Flutter
++
+XAMPP
++
+Apache
++
+MySQL
++
+phpMyAdmin
+```
+
+---
+
+# 🖥️ Prerequisites
+
+Before running the application, make sure the following are installed:
+
+### Required
+
+* Flutter SDK
+* Dart SDK
+* Android Studio or another Flutter-compatible IDE
+* Android Emulator or physical Android device
+* XAMPP
+* MySQL
+* phpMyAdmin
+* Git
+
+---
+
+# 🚀 Setup Instructions
+
+## 1. Clone the Repository
+
+```bash
+git clone <repository-url>
+```
+
+Navigate into the project:
+
+```bash
+cd harvesting-app
+```
+
+---
+
+# 2. Start XAMPP
+
+Open the XAMPP Control Panel.
+
+Start:
+
+```text
+Apache
+MySQL
+```
+
+Both services should be running before using the backend and database.
+
+```text
+XAMPP
+ ├── Apache  → START
+ └── MySQL   → START
+```
+
+---
+
+# 3. Configure the PHP Backend
+
+Open the XAMPP installation directory.
+
+On a default Windows installation:
+
+```text
+C:\xampp\
+```
+
+Open:
+
+```text
+C:\xampp\htdocs\
+```
+
+Create a new folder:
+
+```text
+C:\xampp\htdocs\harvesting_api\
+```
+
+Copy the PHP backend files from the project's PHP directory into:
+
+```text
+C:\xampp\htdocs\harvesting_api\
+```
+
+The final structure should look similar to:
+
+```text
+C:\xampp\htdocs\
+│
+└── harvesting_api\
+    ├── login.php
+    ├── signup.php
+    ├── farmer APIs
+    ├── harvest APIs
+    ├── allocation APIs
+    └── other PHP files
+```
+
+---
+
+# 4. Open phpMyAdmin
+
+Open your browser and visit:
+
+```text
+http://localhost/phpmyadmin/
+```
+
+phpMyAdmin provides a web interface for managing the MySQL database.
+
+---
+
+# 5. Create the Database
+
+Create a database named:
+
+```text
+HARVESTING_APP
+```
+
+Then create the required tables using the SQL provided below.
+
+---
+
+# 🗄️ Database Structure
+
+The application uses the following main tables:
+
+```text
+HARVESTING_APP
+│
+├── operators
+│
+├── farmers
+│
+├── harvests
+│
+├── id_counter
+│
+└── allocations
+```
+
+Relationship overview:
+
+```text
+Operators
+    │
+    │
+    ▼
+Harvests
+    │
+    │
+    ▼
+Allocations
+    │
+    │
+    ▼
+Farmers
+```
+
+---
+
+# 🧾 SQL Database Setup
+
+Use the following SQL to create the database and required tables.
+
+```sql
+CREATE DATABASE HARVESTING_APP;
+
+USE HARVESTING_APP;
+
+
+CREATE TABLE FARMERS(
+    FARMER_ID INT PRIMARY KEY,
+    FARMER_NAME VARCHAR(50),
+    LOCATION VARCHAR(20),
+    SURVEY_NO VARCHAR(50),
+    DOC_DATA LONGBLOB,
+    VILLAGE VARCHAR(20),
+    TALUKA VARCHAR(20),
+    DISTRICT VARCHAR(20),
+    PINCODE VARCHAR(6),
+    ACERS FLOAT
+);
+
+
+CREATE TABLE OPERATORS (
+    OPERATOR_ID INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    phone VARCHAR(15) NOT NULL,
+    location VARCHAR(255) NOT NULL,
+    industry_type VARCHAR(50) NOT NULL,
+    industry_name VARCHAR(255),
+    unique_id VARCHAR(50) NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+
+
+CREATE TABLE HARVESTS(
+    HARVEST_ID INT PRIMARY KEY,
+    OPERATOR_ID INT,
+    OWNED_BY VARCHAR(50),
+    DISABLE BOOLEAN,
+    FOREIGN KEY (OPERATOR_ID) REFERENCES OPERATORS(OPERATOR_ID)
+);
+
+
+CREATE TABLE ID_COUNTER (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    last_number INT NOT NULL
+);
+
+
+INSERT INTO ID_COUNTER (last_number) VALUES (0);
+
+
+CREATE TABLE ALLOCATIONS(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    HARVEST_ID INT UNIQUE,
+    FARMER_ID INT,
+    ALLOCATION_DATE DATE,
+    STATUS VARCHAR(30),
+    FOREIGN KEY (HARVEST_ID) REFERENCES HARVESTS(HARVEST_ID),
+    FOREIGN KEY (FARMER_ID) REFERENCES FARMERS(FARMER_ID)
+);
+```
+
+---
+
+# 🔗 Backend Connection
+
+After configuring the PHP backend and database, the Flutter application needs to communicate with the local machine running XAMPP.
+
+Find the API URLs or IP addresses used by the Dart files.
+
+Replace the development IP address with the **IPv4 address of your computer**.
+
+---
+
+# 🌐 Find Your IPv4 Address
+
+On Windows, open Command Prompt:
+
+```bash
+ipconfig
+```
+
+Look for:
+
+```text
+IPv4 Address
+```
+
+Example:
+
+```text
+IPv4 Address . . . . . . : 192.168.1.100
+```
+
+Use your own IPv4 address in the application's API configuration.
+
+> Do not copy the example IP address above. Use the IPv4 address of the computer running the PHP backend.
+
+---
+
+# 📱 Physical Device Configuration
+
+If the application is being tested on a physical Android device:
+
+```text
+Mobile Device
+      │
+      │ Wi-Fi / Network
+      ▼
+Computer
+      │
+      ▼
+XAMPP
+      │
+      ▼
+PHP API
+      │
+      ▼
+MySQL
+```
+
+The mobile device and the computer running XAMPP should generally be connected to the same local network for direct local API communication.
+
+---
+
+# 📦 Flutter Dependencies
+
+Make sure the required dependencies are available in `pubspec.yaml`.
+
+Example:
+
+```yaml
+dependencies:
+  flutter:
+    sdk: flutter
+
+  email_otp: ^3.0.2
+  permission_handler:
+  flutter_local_notifications:
+  http:
+```
+
+After updating dependencies, run:
+
+```bash
+flutter pub get
+```
+
+---
+
+# ▶️ Run the Application
+
+After completing the backend, database, and Flutter configuration:
+
+```bash
+flutter pub get
+```
+
+Then check connected devices:
+
+```bash
+flutter devices
+```
+
+Run the application:
+
+```bash
+flutter run
+```
+
+You can run the application on:
+
+* Android Emulator
+* Physical Android Device
+* Other supported Flutter platforms, depending on project configuration
+
+---
+
+# 👤 First-Time User Setup
+
+When the application starts for the first time:
+
+```text
+Open Application
+       ↓
+Sign Up
+       ↓
+Enter User Information
+       ↓
+Submit Registration
+       ↓
+User Created
+       ↓
+Login
+       ↓
+Dashboard
+```
+
+After successful registration, the corresponding operator record should be created in the database.
+
+---
+
+# 🌾 Testing Harvest Data
+
+For testing harvest-related screens, sample data may need to be inserted into the database.
+
+The following tables are particularly important:
+
+```text
+HARVESTS
+FARMERS
+ALLOCATIONS
+```
+
+Sample/test records can be added through:
+
+```text
+phpMyAdmin
+    ↓
+HARVESTING_APP
+    ↓
+Select Table
+    ↓
+Insert
+    ↓
+Add Test Data
+```
+
+The Flutter application can then retrieve the data through the PHP APIs.
+
+---
+
+# 🔄 Application Workflow
+
+The overall application workflow can be represented as:
+
+```text
+                    START
+                      │
+                      ▼
+                Open Application
+                      │
+                      ▼
+                 Registration
+                      │
+                      ▼
+                  Login
+                      │
+                      ▼
+                 Dashboard
+                      │
+          ┌───────────┼───────────┐
+          │           │           │
+          ▼           ▼           ▼
+       Farmers     Harvests   Allocations
+          │           │           │
+          └───────────┼───────────┘
+                      │
+                      ▼
+              View / Manage Data
+                      │
+                      ▼
+                     END
+```
+
+---
+
+# 🧑‍🌾 Farmer Workflow
+
+```text
+Open Farmer Section
+        ↓
+Fetch Farmer Data
+        ↓
+Display Farmer Information
+        ↓
+View Location / Details
+```
+
+---
+
+# 🌱 Harvest Workflow
+
+```text
+Open Harvest Section
+        ↓
+Fetch Harvest Records
+        ↓
+Display Harvest Information
+        ↓
+View Related Details
+```
+
+---
+
+# 🔄 Allocation Workflow
+
+```text
+Select Harvest
+      ↓
+Select Farmer
+      ↓
+Create Allocation
+      ↓
+Set Allocation Date
+      ↓
+Set Status
+      ↓
+Save Allocation
+```
+
+---
+
+# 🧪 Testing
+
+Before considering the application ready for further use, test the following:
+
+```text
+[ ] Application starts successfully
+[ ] Registration works
+[ ] Login works
+[ ] Password recovery works
+[ ] OTP verification works
+[ ] Dashboard loads correctly
+[ ] Farmer data loads correctly
+[ ] Harvest data loads correctly
+[ ] Allocation data loads correctly
+[ ] API requests work
+[ ] Database connection works
+[ ] Map/location functionality works
+[ ] Notifications work
+[ ] Required permissions work
+```
+
+---
+
+# 🛠️ Troubleshooting
+
+## Apache Is Not Running
+
+Make sure Apache is started from XAMPP.
+
+```text
+XAMPP
+  ↓
+Apache
+  ↓
+Start
+```
+
+---
+
+## MySQL Is Not Running
+
+Start MySQL from the XAMPP Control Panel.
+
+```text
+XAMPP
+  ↓
+MySQL
+  ↓
+Start
+```
+
+---
+
+## phpMyAdmin Not Opening
+
+Verify that Apache and MySQL are running.
+
+Then open:
+
+```text
+http://localhost/phpmyadmin/
+```
+
+---
+
+## API Not Connecting From Mobile
+
+Check:
+
+1. Apache is running.
+2. PHP files are inside the correct `htdocs` folder.
+3. The computer's IPv4 address is correct.
+4. The mobile device and computer are connected to the appropriate network.
+5. The API URL in the Flutter application is correct.
+6. Windows Firewall is not blocking the required connection.
+
+---
+
+## Database Error
+
+Check:
+
+```text
+Database Name
+Table Names
+Column Names
+MySQL Status
+PHP Database Configuration
+```
+
+Make sure the database name and table structure match the application's PHP API configuration.
+
+---
+
+# 🔐 Security Considerations
+
+This project is a prototype and should receive additional security improvements before production deployment.
+
+Recommended improvements include:
+
+* Password hashing
+* Secure authentication
+* Input validation
+* Prepared SQL statements
+* API authentication
+* Authorization
+* Secure API configuration
+* Environment variables
+* HTTPS
+* Secure OTP implementation
+* Rate limiting
+* Error handling
+* Database access restrictions
+* Secure file/document handling
+
+Do not store real production passwords or sensitive credentials directly in source code.
+
+---
+
+# 🔒 Sensitive Information
+
+Do not commit the following information to a public repository:
+
+```text
+Database Passwords
+API Keys
+Private Tokens
+Production Credentials
+Personal Information
+Private IP Addresses
+Authentication Secrets
+Production Database Information
+```
+
+Use environment-specific configuration for sensitive information.
+
+---
+
+# 🧠 Learning Outcomes
+
+This project provides practical experience with:
+
+* Flutter application development
+* Dart programming
+* Mobile UI development
+* REST/API communication
+* PHP backend development
+* MySQL database management
+* CRUD operations
+* Authentication
+* OTP verification
+* Local notifications
+* Permission handling
+* Location-based functionality
+* Database relationships
+* Local development using XAMPP
+* API integration
+* Debugging
+* Application testing
+
+---
+
+# 🏗️ Development Workflow
+
+```text
+Requirement Understanding
+        ↓
+Application Design
+        ↓
+Database Design
+        ↓
+Flutter UI Development
+        ↓
+PHP API Development
+        ↓
+MySQL Integration
+        ↓
+API Integration
+        ↓
+Testing
+        ↓
+Debugging
+        ↓
+Prototype Demonstration
+```
+
+---
+
+# 📈 Future Improvements
+
+The application can be extended with:
+
+* Role-based authentication
+* Advanced farmer management
+* Advanced harvest management
+* Real-time notifications
+* Improved map functionality
+* Document management
+* Search and filtering
+* Reports and analytics
+* Cloud database
+* Cloud API deployment
+* Better security
+* Automated testing
+* Production deployment
+* Admin dashboard
+* Offline support
+* Data synchronization
+
+---
+
+# 📌 Project Status
+
+**Status: Prototype**
+
+The application demonstrates a complete mobile-to-backend workflow using:
+
+```text
+📱 Flutter
+      +
+🎯 Dart
+      +
+🌐 PHP
+      +
+🗄️ MySQL
+      +
+🖥️ XAMPP
+```
+
+The project is suitable for learning, development, demonstration, and further extension.
+
+---
+
+# 👨‍💻 Developer
+
+**Deevyanshu Vaidya**
+
+GitHub:
+
+[https://github.com/Deevyanshuvaidya](https://github.com/Deevyanshuvaidya)
+
+---
+
+# 📄 Copyright & Intellectual Property
+
+© **2026 Deevyanshu Vaidya. All Rights Reserved.**
+
+This project, including its original source code, application-specific implementation, architecture, documentation, database structure, and project-specific materials, is protected by applicable copyright and intellectual-property laws unless explicitly stated otherwise.
+
+Unauthorized:
+
+* Copying substantial portions of the source code
+* Redistributing the project
+* Publishing the project as your own work
+* Claiming ownership of the original implementation
+* Commercially using the project without permission
+* Rebranding or republishing the project without authorization
+* Creating derivative works from substantial portions of the project without authorization
+* Removing copyright or attribution notices
+
+may result in applicable copyright or intellectual-property issues.
+
+Permission should be obtained from the applicable copyright holder before substantial reuse, redistribution, commercial usage, publication, or creation of derivative works.
+
+### Third-Party Components
+
+This project uses third-party technologies, frameworks, libraries, packages, and services.
+
+Examples include:
+
+* Flutter
+* Dart
+* PHP
+* MySQL
+* XAMPP
+* phpMyAdmin
+* Flutter packages
+* Map-related services
+* Notification libraries
+
+Third-party components remain subject to their respective licenses, copyrights, and terms of use.
+
+The project owner does not claim ownership of third-party software or services.
+
+Users are responsible for complying with the applicable licenses and terms of third-party components.
+
+---
+
+# 📄 License
+
+This project is **proprietary** and intended for educational, development, demonstration, portfolio, and authorized software-development use.
+
+**All rights reserved unless explicitly stated otherwise by the project owner.**
+
+No permission is granted to copy, modify, distribute, sublicense, publish, commercially exploit, or create derivative works from the project's original source code without explicit authorization from the applicable rights holder.
+
+Third-party libraries, frameworks, dependencies, services, and other components remain governed by their respective licenses and terms.
+
+Public availability of this repository does **not** automatically grant permission to reuse, modify, redistribute, or commercially exploit the original source code.
+
+For licensing, redistribution, commercial usage, or permission requests, please contact the project owner.
+
+---
+
+# ⚠️ Disclaimer
+
+This project is provided as a prototype for development, learning, demonstration, and authorized use.
+
+The current implementation may contain:
+
+* Development configurations
+* Local API configurations
+* Test data
+* Environment-specific settings
+* Prototype-level implementation
+* Local network configurations
+* Development dependencies
+
+The application should not be considered production-ready without appropriate:
+
+* Security review
+* Testing
+* Infrastructure configuration
+* Database configuration
+* API security
+* Performance testing
+* Data protection measures
+* Production deployment configuration
+
+Before deploying the application in a production environment, appropriate technical and security review should be performed.
 
 ---
 
 # ⭐ Project Summary
 
-**SHSTRA App** is a Flutter-based prototype developed during an internship at **SHSTRATVA PVT LTD, Pune**.
+**Harvesting App** is a Flutter-based mobile application prototype that demonstrates how a mobile application can communicate with a PHP backend and MySQL database.
 
-The prototype demonstrates the integration of:
+The project brings together:
 
 ```text
 📱 Flutter
@@ -289,7 +1153,7 @@ The prototype demonstrates the integration of:
       +
 🖥️ XAMPP
       +
-🗺️ Google Maps
+🗺️ Location Features
       +
 🔐 Authentication
       +
@@ -298,142 +1162,19 @@ The prototype demonstrates the integration of:
 🔔 Notifications
 ```
 
-The project demonstrates practical experience in developing a complete mobile application, integrating it with backend APIs, designing a relational database, and implementing application-specific workflows.
-
-The project remains subject to the applicable **intellectual-property, confidentiality, copyright, licensing, and usage terms of SHSTRATVA PVT LTD**.
-
----
-
-# ⚖️ Rights & Ownership Summary
-
-| Item                  | Rights / Status                              |
-| --------------------- | -------------------------------------------- |
-| Project Type          | Internship Prototype                         |
-| Organization          | SHSTRATVA PVT LTD, Pune                      |
-| Developer             | Deevyanshu Vaidya                            |
-| Development Context   | Internship                                   |
-| Project Status        | Prototype                                    |
-| Source Code           | Subject to applicable IP/contractual terms   |
-| Commercial Use        | Requires authorization                       |
-| Redistribution        | Requires authorization                       |
-| Modification          | Requires authorization where applicable      |
-| Derivative Works      | Requires authorization where applicable      |
-| Third-Party Libraries | Governed by their respective licenses        |
-| Company Materials     | Subject to SHSTRATVA PVT LTD rights/policies |
+The application demonstrates practical implementation of mobile UI development, API integration, database management, authentication, farmer management, harvest management, and allocation workflows.
 
 ---
 
 # 📌 Final Notice
 
-All copyright, intellectual-property, confidentiality, licensing, and usage matters are subject to the applicable agreements, policies, and rights of **SHSTRATVA PVT LTD, Pune** and other applicable rights holders.
+This repository is provided for **development, educational, demonstration, and authorized use**.
 
+All copyright, intellectual-property, licensing, and usage rights relating to the original project implementation remain with the applicable rights holder.
 
+The project should not be interpreted as an open-source project merely because the repository is publicly accessible.
 
+Any substantial reuse, redistribution, commercial use, publication, or derivative work should be performed only with appropriate authorization.
 
-
-
-
-
-# app
-
-A new Flutter project.
-
-# Wellcome to this peoject----
-Note:- Dont directly commit or push into master branch make a sub-branch make confirm changes and if it working properly then commit and push the changes
-
-## Colaborators Instructions--->
-1) Make sure that you have xaamp downloaded in your system. If not download it.
-2) Open Xaamp interface and start the appache and mysql server. And whenever you want to use database start both servers.
-3) Now open your C drive(By default windows drive) and in this open xampp folder then open htdocs folder.
-4) Now Create the new api_app_testing folder in htdocs folder.(C:\xampp\htdocs\api_app_testing)
-5) And in this new api_app_testing folder paste all php files which are present in php_file folder in above repository .
-6) Now Create the database open your browser and search "http://localhost/phpmyadmin/" the phpmyadmin interface is open
-   and in it create database name "SHSTRA_APP" and in it create following tables using following query.
-   i) first create sshoperators,FARMER, Harvest, and in last ALLOCATION_SSH.
-   ii) then create id_counter and fire query 'insert' which is next to it only first time .
-7) Now your database and php are set.
-8) now open command prompt and run ipconfig and copy ipv4 address and replace it in all dart file with "192.168.142.35".
-   (While running the above command in cmd make sure that you are conected to internet otherwiae it will not shown the ipv4 address)
-   9)Now your connection setup is all done with database.
-10) before running the app make sure you have all dependencies in "pubspec.yaml" file if not then install it or pubget it.
-    dependencies required---->
-
-    dependencies:
-    flutter:
-    sdk: flutter
-    email_otp: ^3.0.2
-    permission_handler:
-    flutter_local_notifications:
-    http:
-
-11) now run the app on emulator or on physical device.
-12) open the app in emulator or on physical device and first signup in it.
-13) After succeful registration your sshoperators table get updated and and now you can log in.
-14) now for myssh page first manually add the dummy data in database tables like harvest,Farmer,ALLOCATION_SSH table and then
-    you can fetch it in your app. (Use phpmyadmin interface for updating the table in data base)
-
-
-
-
-
-
-## SQl QUERY--->
-
-CREATE DATABASE SHSTRA_APP;
-
-
-CREATE TABLE FARMER(
-FARMER_ID INT PRIMARY KEY,
-FARMER_NAME VARCHAR(50),
-LOCATION VARCHAR(20),
-SURVEY_NO VARCHAR(50),
-DOC_DATA LONGBLOB,
-VILLAGE VARCHAR(20),
-TALUKA VARCHAR(20),
-DISTRICT VARCHAR(20),
-PINCODE VARCHAR(6),
-ACERS FLOAT
-);
-
-
-CREATE TABLE sshoperators (
-OPERATOR_ID INT AUTO_INCREMENT PRIMARY KEY,
-name VARCHAR(255) NOT NULL,
-email VARCHAR(255) NOT NULL,
-phone VARCHAR(15) NOT NULL,
-location VARCHAR(255) NOT NULL,
-industry_type VARCHAR(50) NOT NULL,
-industry_name VARCHAR(255),
-unique_id VARCHAR(50) NOT NULL,
-password VARCHAR(255) NOT NULL
-);
-
-
-
-CREATE TABLE HARVEST(
-HARVEST_ID INT PRIMARY KEY,
-OPERATOR_ID INT,
-OWNED_BY VARCHAR(50),
-DISABLE BOOLEAN,
-FOREIGN KEY (OPERATOR_ID) REFERENCES sshoperators(OPERATOR_ID)
-);
-
-
-
-CREATE TABLE id_counter (
-id INT AUTO_INCREMENT PRIMARY KEY,
-last_number INT NOT NULL
-);
-INSERT INTO id_counter (last_number) VALUES (0);
-
-
-
-CREATE TABLE ALLOCATION_SSH(
-id INT AUTO_INCREMENT PRIMARY KEY,
-HARVEST_ID INT Unique,
-FARMER_ID INT,
-ALLOCATION_DATE DATE,
-STATUS VARCHAR(30),
-FOREIGN KEY (HARVEST_ID) REFERENCES HARVEST(HARVEST_ID),
-FOREIGN KEY (FARMER_ID) REFERENCES FARMER(FARMER_ID)
-);
+```
+```
